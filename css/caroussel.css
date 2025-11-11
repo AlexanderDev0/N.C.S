@@ -1,0 +1,87 @@
+* { box-sizing: border-box; }
+
+/* Título */
+.cliente-titulo {
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 24px 0;
+  color: #123a1c;
+  font-weight: bold;
+  font-family: 'arima madurai', sans-serif;
+}
+
+/* Container do carrossel */
+.carousel {
+  width: 100%;
+  display: flex;
+  gap: 3rem;              
+  padding: 24px;
+  overflow-x: auto;      
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  align-items: center;
+  background-color: #123a1c; 
+  justify-content: space-around;
+}
+
+/* Itens (list items) */
+.carousel-li {
+  list-style: none;
+  flex: 0 0 auto;         
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagem do cliente */
+.cliente-image {
+  width: 260px;           
+  height: auto;
+  display: block;
+  opacity: 0.9;
+  transition: transform .25s ease, opacity .25s ease;
+  user-select: none;
+  color: black;
+}
+
+/* Hover */
+.cliente-image:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+.carousel-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  color: #f39f5b;
+  padding: 10px;
+  cursor: pointer;
+
+  z-index: 10;
+  border-radius: 50%;
+}
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .cliente-image { width: 250px; }
+  .carousel { gap: 2rem; padding: 18px; }
+}
+
+@media (max-width: 480px) {
+  .cliente-image { width: 300px; }
+  .carousel { 
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem; padding: 5rem; }
+}
+
+/* Estilizando scroll bar (opcional) */
+.carousel::-webkit-scrollbar { height: 8px; }
+.carousel::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }

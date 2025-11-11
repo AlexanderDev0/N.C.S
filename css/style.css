@@ -1,0 +1,434 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 2%;
+
+}
+
+/* Menu */
+
+.navbar {
+  position: fixed;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  background: #fff;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  
+}
+
+/* Logo */
+.logonav h1 {
+  color: #255022;
+  font-size: 2.5rem;
+ font-family: "arima madurai", sans-serif;
+ font-weight: bold;
+}
+
+.logonav span {
+  display: block;
+  font-size: 0.8rem;
+  color: #f39f5b;
+   font-family: "arima madurai", sans-serif;
+   font-weight: bold;
+   text-align: center;
+}
+
+/* Links */
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #255022;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-family: "arima madurai", sans-serif;
+  font-weight: bold;
+  
+}
+
+.menu a:hover {
+  color: #f39f5b;
+}
+
+/* Botão */
+.btn {
+  font-family: "arima madurai", sans-serif;;
+  background: #255022;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #f39f5b;
+}
+
+/* Botão menu hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #255022;
+}
+
+
+
+ 
+
+.cabeca {
+  padding: 4rem;
+  margin-bottom: 20px;
+  padding-left: 7.0rem;
+  padding-right: 7.0rem;
+}
+
+
+
+/*Sobre a Empresa*/
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* Quando entra na tela */
+.reveal.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Tipos de direção */
+.reveal-up {
+  transform: translateY(50px);
+}
+
+.reveal-down {
+  transform: translateY(-50px);
+}
+
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  transform: translateX(60px);
+}
+
+/* Zoom suave */
+.reveal-zoom {
+  transform: scale(0.8);
+}
+
+/* Quando ativadas, voltam ao normal */
+.reveal-up.active,
+.reveal-down.active,
+.reveal-left.active,
+.reveal-right.active,
+.reveal-zoom.active {
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+
+.empresa__textos {
+  color: #255022;
+  padding: 4.0rem;
+  line-height: 1.6;
+}
+
+.logo2 {
+  max-width: 80vh;   /* ocupa toda a largura da div */
+  height: 80vh;  /* ocupa toda a altura da div */
+  object-fit: cover; /* cobre a div sem distorcer (corta se sobrar) */
+
+}
+
+.empresa__textos__titulo{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3.0rem;
+  font-family: "arima madurai", sans-serif;
+}
+
+.empresa__textos__paragrafo {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: left;
+  
+}
+
+/*----------------------------------------------------------------------*/
+/*numeros*/
+
+
+.tituloli {
+
+  font-family: "arima madurai", sans-serif;
+  font-size: 1.5rem;
+  color: #255022;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.numberli {
+  font-size: 4.0rem;
+  color: #f39f5b;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: "arima madurai", sans-serif;
+  font-style: italic;
+}
+
+
+.container {
+
+  background-color: #255022;
+  border-radius: 0 0 300px 300px;
+  border-bottom: #f39f5b 6px solid;
+}
+
+.container__textos__apresentacao {
+ font-family: "arima madurai", sans-serif;
+  font-weight: bold;
+  font-size: 1.55rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+ 
+
+
+}
+
+
+.container__textos__ncs {
+  color: #f39f5b;
+  font-size: 128px;
+  font-weight: bold;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  opacity: 21%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-family: "arima madurai", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container__texto__apresentacao2 {
+  font-family: "arima madurai", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.20rem;
+  color: white;
+  text-align: center;
+ 
+
+
+}
+/*----------------------------------------------------------------------*/
+/*Serviços*/
+.servicos {
+  border-radius: 150px 0px 150px 0px;
+}
+
+
+/*Depoimentos*/
+.depoimentos {
+  text-align: center;
+  background-image: url(../assets/Img/Table.png);
+  width: 100%;
+  height: auto;
+  padding-top: 5.0rem;
+  padding-bottom: 10.0rem;
+  width: 100%;
+  border-radius: 100px 100px 100px 100px;
+
+}
+
+.depoimentostitle {
+  font-family: 'Arima Madurai', sans-serif;
+  font-size: 2.5rem;
+  color: #f39f5b;
+  text-align: center;
+  font-weight: bold;
+
+
+}
+
+
+
+.footer {
+  color: white;
+  width: 100%;
+  margin-bottom: 4.0rem;
+
+
+}
+
+.institucional {
+ 
+  gap: 10px;
+  font-size: 1.4rem;
+  color: #255022;
+  text-align: center;
+  padding-top: 3.0rem;
+}
+
+.institucionalquemsomos {
+  font-size: 1.4rem;
+  color: #255022;
+  text-align: center;
+}
+
+.institucional1 {
+  font-family: "arima madurai", sans-serif;
+  font-size: 1.9rem;
+  color: #255022;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.enderecopai {
+  font-size: 1.4rem;
+  color: #255022;
+  text-align: center;
+  padding-top: 3.0rem;
+}
+
+.endereco {
+  font-size: 1.9rem;
+  color: #255022;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  font-family: "arima madurai", sans-serif;
+  font-weight: bold;
+}
+
+.contato {
+  
+  font-size: 1.4rem;
+  color: #255022;
+  
+}
+.contato h3 {
+  font-family: "arima madurai", sans-serif;
+  color: #255022;
+  text-align: center;
+  font-weight: bold;
+}
+.link-text {
+  color: #255022;
+  text-decoration: none;
+}
+
+.link-text:hover {
+  color: #f39f5b;
+}
+
+.contact-form {
+  font-size: 1.4rem;
+  color: #255022;
+  text-align: center;
+}
+
+.logo {
+  width: 85%;
+  height: 35%;
+  align-items: left;
+
+}
+.logo2 img{
+  width: 40vh;
+  align-items: right;
+
+}
+.RedesLogo {
+  width: 100%;
+  height: 100%
+  
+}
+
+/*responsivo*/
+@media (max-width: 768px) {
+.menu a:hover {
+  color: #255022;
+}
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center
+
+}
+
+.container__textos__apresentacao {
+  display: none;
+ font-family: "arima madurai", sans-serif;
+  font-weight: 400;
+  
+  font-size: 2.25rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+ 
+
+
+}
+
+.container__textos__ncs {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;;
+  color: #f39f5b;
+  font-size: 128px;
+  font-weight: bold;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  opacity: 21%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-family: "arima madurai", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding: 150px;
+ 
+}
+
+.container__texto__apresentacao2 {
+  font-family: "arima madurai", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  display: none;
+
+}
+
+
+
+}
+

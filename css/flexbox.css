@@ -1,0 +1,359 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+}
+
+.logonav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+
+/* Menu */
+.navbar {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Header*/
+.container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    max-height: 80vh;
+    overflow: hidden;
+    object-fit: cover;
+    max-width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.container__textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding-right: 4.0rem;
+
+}
+
+.container__banner {
+    flex-grow: 1;
+    flex-shrink: 1;
+    object-fit: cover;
+    max-width: 40%;
+    padding-right: 4.0rem;
+    animation: zoomInOut 12s ease-in-out infinite;
+    transition: transform 1s ease;
+}
+
+
+/*Sobre a Empresa*/
+.empresa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+.empresa__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.empresa__textos {
+    flex: 1 0 25%;
+}
+
+/*numeros*/
+.numeros {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 3.0rem;
+    padding-bottom: 3.0rem;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+}
+
+
+.numberli{
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+
+/*footer*/
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+
+}
+
+
+.logo2 {
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+}
+
+.institucional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.institucionalquemsomos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.institucional1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.enderecopai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contato {
+    padding-top: 3.0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+@keyframes zoomInOut {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* ==============================
+   RESPONSIVO PARA CELULARES
+   ============================== */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 14px;
+    overflow-x: hidden; 
+  }
+
+   .container {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    padding-top: 50px;
+    z-index: 0; 
+    min-height: 250px; 
+    margin-bottom: 20px; 
+    border-radius: 0;
+  }
+
+  .container::before {
+    content: "";
+    position: absolute;
+    inset: 0;                     
+    background-image: url(../assets/Img/banner.jpg); 
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    animation: zoomInOut 7s ease-in-out infinite;
+    z-index: 0;                  
+    will-change: transform;      
+  }
+
+  
+  .container > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .container__banner { display: none; }
+
+  .container__textos__apresentacao {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    padding-top: 50px;
+  }
+  .container__texto__apresentacao2 {
+    
+    color: #fff;
+    margin-bottom: 10px;
+    padding-top: 20px;
+  }
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+    border-radius: 10px;
+  }
+
+  .logonav h1 {
+    font-size: 1.5rem;
+  }
+
+  .logonav span {
+    font-size: 0.8rem;
+  }
+  .btn {
+    display: none;
+  }
+
+  /* Menu */
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    
+  }
+
+  .menu.active {
+    display: flex;
+    background-color: #f39f5b;
+    border-radius: 5px;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Botão de menu */
+  .menu-toggle {
+    display: flex;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Seção da empresa */
+  .empresa {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .empresa__img img {
+    width: 80%;
+    margin-top: 20px;
+  }
+    .empresa__textos {
+        flex: 1 0 100%;
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+  /* Números */
+  .numeros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Cards */
+  .servicos, .cards2, .cards-depoimentos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .card2, .card-depoimento {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+
+  }
+  .logo2 {
+    width: 40vh;
+  }
+  .institucional {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .socialmedia {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 80%;
+    margin-top: 10px;
+  } 
+}
