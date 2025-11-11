@@ -323,9 +323,11 @@ main {
   }
 
   /* Cards */
+
   .servicos, .cards2, .cards-depoimentos {
     flex-direction: column;
     align-items: center;
+    
   }
 
   .card, .card2, .card-depoimento {
