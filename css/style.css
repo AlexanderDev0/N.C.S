@@ -370,7 +370,7 @@ body {
 }
 
 /*responsivo*/
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 .menu a:hover {
   color: #255022;
 }
@@ -396,24 +396,24 @@ justify-content: center
 
 }
 
+
 .container__textos__ncs {
 display: flex;
 justify-content: center;
 align-items: center;
-flex-direction: column;;
+flex-direction: column;
+ 
   color: #f39f5b;
-  font-size: 128px;
-  font-weight: bold;
-  margin-top: -20px;
-  margin-bottom: 20px;
-  opacity: 21%;
-  margin-top: 0%;
-  margin-bottom: 0%;
+  font-size: 4rem;
+  font-weight: bold; 
+  opacity: 31%;
   font-family: "arima madurai", sans-serif;
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  padding: 150px;
+  padding-top: 110px;
+  padding-bottom: 150px;
+  padding-right: 30px;
  
 }
 

@@ -203,6 +203,9 @@ main {
     margin-bottom: 20px; 
     border-radius: 0;
   }
+  .container__textos {
+    padding: 0;
+  }
 
   .container::before {
     content: "";
@@ -237,6 +240,8 @@ main {
     margin-bottom: 10px;
     padding-top: 20px;
   }
+
+
   /* Navbar */
   .navbar {
     position: fixed;
