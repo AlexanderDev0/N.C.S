@@ -364,3 +364,117 @@ main {
     margin-top: 10px;
   } 
 }
+@media (max-width: 1024px) {
+  .container {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 150px;
+    padding-top: 250px;
+    z-index: 0; 
+    min-height: 250px; 
+    margin-bottom: 20px; 
+    border-radius: 0;
+  }
+  .container__textos {
+    padding: 0;
+
+  }
+
+  .container::before {
+    content: "";
+    position: absolute;
+    inset: 0;                     
+    background-image: url(../assets/Img/banner.jpg); 
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    animation: zoomInOut 7s ease-in-out infinite;
+    z-index: 0;                  
+    will-change: transform;      
+  }
+
+  
+  .container > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .container__banner { display: none; }
+
+  .container__textos__apresentacao {
+    display: none;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    padding-top: 50px;
+    opacity: 10%;
+
+  }
+  .container__texto__apresentacao2 {
+    
+    color: #fff;
+    margin-bottom: 10px;
+    padding-top: 20px;
+  }
+.navbar {
+    position: fixed;
+    top: 0;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+    border-radius: 10px;
+  }
+
+  .logonav h1 {
+    font-size: 1.5rem;
+  }
+
+  .logonav span {
+    font-size: 0.8rem;
+  }
+  .btn {
+    display: none;
+  }
+
+  /* Menu */
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    
+  }
+
+  .menu.active {
+    display: flex;
+    background-color: #f39f5b;
+    border-radius: 5px;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Botão de menu */
+  .menu-toggle {
+    display: flex;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+}
