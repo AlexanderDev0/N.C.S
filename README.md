@@ -52,7 +52,7 @@ O resultado final foi uma **landing page moderna, intuitiva e totalmente respons
 
 ## 📫 Contato
 
-🌐 **Site:** [www.ncsconsultoria.com.br](#)
+🌐 **Site:** [[www.ncsconsultoria.com.br](https://ncssegurancadosalimentos.vercel.app)](#)
 
 ---
 
